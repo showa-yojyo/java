@@ -1,8 +1,9 @@
 {
     "java.project.sourcePaths": [
-        "connect"
+        "src"
     ],
+    "java.project.outputPath": "bin",
     "java.project.referencedLibraries": [
-        "connect/sqlite-jdbc-3.39.3.0.jar"
+        "lib/**/sqlite-jdbc-3.39.3.0.jar"
     ]
 }

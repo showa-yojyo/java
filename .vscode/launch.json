@@ -6,14 +6,14 @@
             "name": "Launch Current File",
             "request": "launch",
             "mainClass": "${file}",
-            "args": "${workspaceFolder}/test.db"
+            "args": "${workspaceFolder}/test.db",
+            "projectName": "java_5e9af84f"
         },
         {
             "type": "java",
             "name": "Launch Hello",
             "request": "launch",
             "mainClass": "net.sqlitetutorial.Hello",
-            "cwd": "${workspaceFolder}/connect",
             "args": "../../test.db",
             "projectName": "java_5e9af84f"
         },
@@ -24,22 +24,6 @@
             "mainClass": "net.sqlitetutorial.Connect",
             "projectName": "java_5e9af84f",
             "args": "${workspaceFolder}/../chinook.db"
-        },
-        {
-            "type": "java",
-            "name": "Launch CreateDatabase",
-            "request": "launch",
-            "mainClass": "net.sqlitetutorial.CreateDatabase",
-            "args": "${workspaceFolder}/test.db",
-            "projectName": "java_5e9af84f"
-        },
-        {
-            "type": "java",
-            "name": "Launch CreateTable",
-            "request": "launch",
-            "mainClass": "net.sqlitetutorial.CreateTable",
-            "args": "${workspaceFolder}/test.db",
-            "projectName": "java_5e9af84f"
         }
     ]
 }
