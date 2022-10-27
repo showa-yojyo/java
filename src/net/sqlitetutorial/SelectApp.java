@@ -1,6 +1,5 @@
 package net.sqlitetutorial;
 
-import java.sql.DriverManager;
 import java.sql.Connection;
 import java.sql.ResultSet;
 import java.sql.SQLException;
@@ -11,30 +10,14 @@ import java.sql.PreparedStatement;
  *
  * @author sqlitetutorial.net
  */
-public class SelectApp {
-    /** SQLite connection string */
-    String url;
-
+public class SelectApp extends AppBase{
     /**
+     * The consructor
+     *
      * @param url SQLite connection string
      */
     public SelectApp(String url) {
-        this.url = url;
-    }
-
-    /**
-     * Connect to the test.db database
-     *
-     * @return the Connection object
-     */
-    private Connection connect() {
-        Connection conn = null;
-        try {
-            conn = DriverManager.getConnection(this.url);
-        } catch (SQLException e) {
-            System.out.println(e.getMessage());
-        }
-        return conn;
+        super(url);
     }
 
     /**
