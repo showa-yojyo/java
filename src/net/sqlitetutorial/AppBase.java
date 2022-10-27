@@ -7,15 +7,16 @@ import java.sql.SQLException;
 /**
  * The base class for SelectApp, InsertApp, UpdateApp, DeleteApp, etc.
  */
-public class AppBase {
+abstract class AppBase {
     /** SQLite connection string */
     protected String url;
 
     /**
-     * @param url SQLite connection string
+     * @param args
      */
-    protected AppBase(String url) {
-        this.url = url;
+    protected AppBase(String[] args) {
+        // SQLite connection string
+        this.url = "jdbc:sqlite:" + args[0];
     }
 
     /**

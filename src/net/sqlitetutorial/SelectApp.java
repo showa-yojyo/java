@@ -14,10 +14,10 @@ public class SelectApp extends AppBase{
     /**
      * The consructor
      *
-     * @param url SQLite connection string
+     * @param args the command line arguments
      */
-    public SelectApp(String url) {
-        super(url);
+    public SelectApp(String[] args) {
+        super(args);
     }
 
     /**
@@ -73,9 +73,8 @@ public class SelectApp extends AppBase{
      * @param args the command line arguments
      */
     public static void main(String[] args) {
-        // "jdbc:sqlite:" + "../../test.db"
-        SelectApp app = new SelectApp("jdbc:sqlite:" + args[0]);
-        //app.selectAll();
+        SelectApp app = new SelectApp(args);
+        app.selectAll();
         app.getCapacityGreaterThan(3600);
     }
 }

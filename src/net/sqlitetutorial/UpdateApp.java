@@ -12,10 +12,10 @@ public class UpdateApp extends AppBase{
     /**
      * The consructor
      *
-     * @param url SQLite connection string
+     * @param args the command line arguments
      */
-    public UpdateApp(String url) {
-        super(url);
+    public UpdateApp(String[] args) {
+        super(args);
     }
 
     /**
@@ -48,8 +48,7 @@ public class UpdateApp extends AppBase{
      * @param args the command line arguments
      */
     public static void main(String[] args) {
-        // "jdbc:sqlite:" + "../../test.db"
-        UpdateApp app = new UpdateApp("jdbc:sqlite:" + args[0]);
+        UpdateApp app = new UpdateApp(args);
         // update the warehouse with id 3
         app.update(3, "Finished Products", 5500);
     }

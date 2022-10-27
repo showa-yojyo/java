@@ -10,10 +10,12 @@ import java.sql.SQLException;
  */
 public class InsertApp extends AppBase{
     /**
-     * @param url SQLite connection string
+     * The constructor
+     *
+     * @param args the command line arguments
      */
-    public InsertApp(String url) {
-        super(url);
+    public InsertApp(String[] args) {
+        super(args);
     }
 
     /**
@@ -40,7 +42,7 @@ public class InsertApp extends AppBase{
      */
     public static void main(String[] args) {
         // "jdbc:sqlite:" + "../../test.db"
-        InsertApp app = new InsertApp("jdbc:sqlite:" + args[0]);
+        InsertApp app = new InsertApp(args);
         // insert three new rows
         app.insert("Raw Materials", 3000);
         app.insert("Semifinished Goods", 4000);
