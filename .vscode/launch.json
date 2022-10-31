@@ -6,7 +6,7 @@
             "name": "Launch Current File",
             "request": "launch",
             "mainClass": "${file}",
-            "args": "${workspaceFolder}/test.db",
+            "args": "${workspaceFolder}/db/test.db",
             "projectName": "java_5e9af84f"
         },
         {
@@ -14,7 +14,7 @@
             "name": "Launch Hello",
             "request": "launch",
             "mainClass": "net.sqlitetutorial.Hello",
-            "args": "../../test.db",
+            "args": "${workspaceFolder}/db/test.db",
             "projectName": "java_5e9af84f"
         },
         {
@@ -23,7 +23,7 @@
             "request": "launch",
             "mainClass": "net.sqlitetutorial.Connect",
             "projectName": "java_5e9af84f",
-            "args": "${workspaceFolder}/../chinook.db"
+            "args": "${workspaceFolder}/db/chinook.db"
         }
     ]
 }
